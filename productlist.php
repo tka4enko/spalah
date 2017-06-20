@@ -18,6 +18,7 @@
  * @author Alexander Tkachenko
  */
 require_once 'data.php';
+$product = getProductList(0,4);
 ?>
 <div class="container">
 	<?php require_once 'header.php';?>
@@ -27,6 +28,7 @@ require_once 'data.php';
 				<th>Images</th>
 				<th>Название</th>
 				<th>Краткое описание</th>
+				<th>Категория</th>
 				<th>Цена</th>
 				<th>Ссылка</th>
 			</tr>
@@ -34,12 +36,13 @@ require_once 'data.php';
 				?>
 				<tr>
 					<td>
-						<span class="image" style="background-image:url(<?php echo $item['product_img']?>);"></span>
+						<span class="image" style="background-image:url(<?php echo $item[2]?>);"></span>
 					</td>
-					<td><?php echo $item['product_name']?></td>
-					<td><?php echo $item['product_subtitle']?></td>
-					<td><?php echo $item['product_price']?>$</td>
-					<td><a href="/product?key=<?php echo $item['id']?>">Подробнее...</a></td>
+					<td><?php echo $item[1]?></td>
+					<td><?php echo $item[4]?></td>
+					<td><?php echo $item[8]?></td>
+					<td><?php echo $item[3]?>$</td>
+					<td><a href="/product?page=<?php echo $item[0]?>">Подробнее...</a></td>
 				</tr>
 				<?php
 			}?>

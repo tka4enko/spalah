@@ -17,28 +17,29 @@
  * @author Alexander Tkachenko
  */
 require_once 'data.php';
-$idPage = $_GET['key'];
+$idPage = $_GET['page'];
+$product = getProduct($idPage);
 ?>
 <div class="container">
 	<?php require_once 'header.php'; ?>
 
 	<main class="main">
 		<div class="product">
-			<?php foreach ($product as $item){
-				if($idPage == $item['id']){ ?>
+			<?php foreach ($product as $item){?>
 						<div class="product-image">
-							<img src="../<?php echo $item['product_img'] ?>" alt="">
+							<img src="../<?php echo $item['3'] ?>" alt="">
 						</div>
 						<div class="product-body">
-							<h1 class="product-name"><?php echo $item['product_name'];?></h1>
-							<div class="product-price"><?php echo $item['product_price'] ?>$</div>
+							<h1 class="product-name"><?php echo $item[2];?></h1>
+							<div class="product-category"><?php echo $item[5];?></div>
+							<div class="product-price"><?php echo $item['1'] ?>$</div>
 							<div class="product-description">
-								<p><?php echo $item['product_description'] ?></p>
+								<p><?php echo $item['4'] ?></p>
 							</div>
 						</div>
 					<?php
 				}
-			};?>
+			;?>
 		</div>
 
 	</main>
