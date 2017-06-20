@@ -33,7 +33,7 @@ SQL;
 /**
  * @param $page
  * @param $perPage
- *	Functions get all products on page vai LIMIT MYSQL
+ *	Functions get all products on page productlist vai LIMIT MYSQL
  * @return mixed
  * @author Alexander Tkachenko
  */
