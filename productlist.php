@@ -15,7 +15,7 @@
  * @param Home Work
  *
  *
- * @author Alexsander Tkachenko
+ * @author Alexander Tkachenko
  */
 require_once 'data.php';
 ?>
@@ -39,7 +39,7 @@ require_once 'data.php';
 					<td><?php echo $item['product_name']?></td>
 					<td><?php echo $item['product_subtitle']?></td>
 					<td><?php echo $item['product_price']?>$</td>
-					<td><a href="/product/?key=<?php echo $item['id']?>">Подробнее...</a></td>
+					<td><a href="/product?key=<?php echo $item['id']?>">Подробнее...</a></td>
 				</tr>
 				<?php
 			}?>

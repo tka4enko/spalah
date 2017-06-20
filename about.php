@@ -15,15 +15,15 @@
  * @param Home Work
  *
  *
- * @author Alexsander Tkachenko
+ * @author Alexander Tkachenko
  */
 require_once 'data.php';
 ?>
 <div class="container">
 	<?php require_once 'header.php';?>
 	<main class="main">
-			<h1><?php echo $about['title'] ?></h1>
-			<p><?php echo $about['description'] ?></p>
+		<h1><?php echo $about['title'] ?></h1>
+		<p><?php echo $about['description'] ?></p>
 	</main>
 </div>
 </body>
