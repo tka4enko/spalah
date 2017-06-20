@@ -5,15 +5,18 @@ function connect(){
 		die('Ошибка соединения: ' . mysql_error());
 	}
 	echo 'Успешно соединились';
+	return $link;
+}
+function getProduct(){
+	$link = connect();
 	$res = $link->query("SELECT * FROM spalah.product");
 	?>
-	<pre>
+<pre>
 	<?php print_r($res) ?>
 </pre>
-	<?php
+<?php
 }
- connect();
-
+getProduct();
 //	$product = array(
 //		array(
 //			'id' => 1,
