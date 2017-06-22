@@ -23,15 +23,10 @@
  * @author Alexander Tkachenko
  */
 require_once 'data.php';
+$product = getTopProduct();
 ?>
 <div class="container">
 	<?php require_once 'header.php'; ?>
-	<?php
-	$a = 10;
-	echo ++$a;
-	echo $a++;
-	echo ++$a;
-	?>
 	<main class="main">
 		<ul class="product-list">
 			<?php foreach ($product as $item){
@@ -39,19 +34,22 @@ require_once 'data.php';
 				<li>
 					<div class="product-list-item">
 						<div class="product-img">
-							<img src="<?php echo $item['product_img'] ?>" alt="">
+							<img src="<?php echo $item[3] ?>" alt="">
 						</div>
 						<div class="product-body">
 							<div class="product-name">
-								<?php echo $item['product_name'];?>
+								<?php echo $item[1];?>
 							</div>
 							<div class="product-subtitle">
-								<?php echo $item['product_subtitle'];?>
+								<?php echo $item[2];?>
+							</div>
+							<div class="product-category">
+								<?php echo $item[5];?>
 							</div>
 							<div class="product-price">
-								<?php echo $item['product_price'];?>$
+								<?php echo $item[4];?>$
 							</div>
-							<a href="product?key=<?php echo $item['id']; ?>" class="btn product-link">
+							<a href="product?page=<?php echo $item[0]; ?>" class="btn product-link">
 								Подробнее
 							</a>
 						</div>

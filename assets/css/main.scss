@@ -176,3 +176,19 @@ img{
 		}
 	}
 }
+.pagination{
+	display: flex;
+	justify-content: space-around;
+	padding: 50px 0;
+	li{
+		font-size: 20px;
+		text-decoration: none;
+		a{
+			padding: 10px;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}

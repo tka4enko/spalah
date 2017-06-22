@@ -18,7 +18,12 @@
  * @author Alexander Tkachenko
  */
 require_once 'data.php';
-$product = getProductList(0,4);
+$productPage = $_GET['page'];
+$perPage = 4;
+$page = ($productPage-1) * $perPage;
+$product = getProductList($page , $perPage);
+$productCount = getCountProduct()[0][0]/$perPage;
+
 ?>
 <div class="container">
 	<?php require_once 'header.php';?>
@@ -48,6 +53,11 @@ $product = getProductList(0,4);
 			}?>
 
 		</table>
+		<ul class="pagination">
+			<?php for ($i =0;$i<$productCount;$i++) {?>
+				<li><a href="?page=<?php echo $i+1; ?>"><?php echo $i+1; ?></a></li>
+			<?php } ?>
+		</ul>
 	</main>
 </div>
 </body>

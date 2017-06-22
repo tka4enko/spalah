@@ -76,9 +76,7 @@ img {
 
 .main {
   margin-top: 40px; }
-.product{
-  
-}
+
 .product-image {
   width: 30%;
   float: left;
@@ -146,5 +144,18 @@ img {
     font-size: 18px; }
     .table-product tr td > a, .table-product tr th > a {
       display: block; }
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0; }
+  .pagination li {
+    font-size: 20px;
+    text-decoration: none; }
+    .pagination li a {
+      padding: 10px;
+      text-decoration: none; }
+      .pagination li a:hover {
+        text-decoration: underline; }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,7 +4,7 @@
 	</div>
 	<ul class="nav">
 		<li><a href="/">Main</a></li>
-		<li><a href="/productlist">Product List</a></li>
+		<li><a href="/productlist?page=1">Product List</a></li>
 		<li><a href="/about">About</a></li>
 	</ul>
 </header>
