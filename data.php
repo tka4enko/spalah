@@ -91,8 +91,29 @@ SQL;
 	$result = $res->fetch_all();
 	return $result;
 }
-	$about = array(
-		'title' => 'Title About US',
-		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda excepturi fuga fugiat nihil officiis perspiciatis quam quasi, saepe veniam. Assumenda aut commodi consequatur deserunt dignissimos esse fuga harum in, maiores modi, molestias mollitia non numquam quae quas reiciendis, repudiandae sed. Delectus itaque magnam optio perspiciatis ratione sequi similique, vel veniam!',
-	);
-//;?>
+
+/**
+ * @return array
+ *  function get info for about company page
+ * @author
+ */
+function infoAboutCompany(){
+	$link = connect();
+	$mysql = <<<SQL
+SELECT
+title,
+description
+FROM about_us;
+SQL;
+	$res = mysqli_query($link,$mysql);
+	$result = $res->fetch_all();
+	$about = array();
+	foreach ($result as $item){
+		$about = array(
+			'title' => $item[0],
+			'description' => $item[1]
+		);
+	}
+	return $about;
+}
+;?>

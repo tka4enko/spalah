@@ -18,6 +18,7 @@
  * @author Alexander Tkachenko
  */
 require_once 'data.php';
+$about= infoAboutCompany();
 ?>
 <div class="container">
 	<?php require_once 'header.php';?>
