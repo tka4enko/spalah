@@ -24,7 +24,7 @@ class ViewCreator
         return new $name();
     }
 }
-include_once 'model/model-databasehenlder.php';
+include_once 'controller/controller-databasehenlder.php';
 include_once 'controller/controller-index.php';
 include_once 'controller/controller-product.php';
 include_once 'controller/controller-product-list.php';
@@ -33,20 +33,6 @@ include_once 'model/model-product-list.php';
 include_once 'model/model-product.php';
 include_once 'model/model-index.php';
 include_once 'model/model-about.php';
-//include_once 'views/view.php';
+include_once 'views/view.php';
 
 
-/**
- * Class View
- */
-class View
-{
-
-	public function render($template, array $variables)
-	{
-		require __DIR__ . '/render/' . $template;
-
-		die();
-	}
-
-}
