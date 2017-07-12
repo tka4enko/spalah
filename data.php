@@ -67,7 +67,6 @@ FROM `order`
 GROUP BY product_id
 ORDER BY sum(count) DESC
 LIMIT 4;
-;
 SQL;
 	$res = mysqli_query($link,$mysql);
 	$result = $res->fetch_all();

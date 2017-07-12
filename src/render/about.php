@@ -6,7 +6,7 @@
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Spalah HomeWork About</title>
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 
 </head>
 <body>
@@ -17,13 +17,14 @@
  *
  * @author Alexander Tkachenko
  */
-print_r()
+
 ?>
+
 <div class="container">
 	<?php require_once 'header.php';?>
 	<main class="main">
-		<h1><?php echo $about['title'] ?></h1>
-		<p><?php echo $about['description'] ?></p>
+		<h1><?php echo $variables['title'] ?></h1>
+		<p><?php echo $variables['description'] ?></p>
 	</main>
 </div>
 </body>

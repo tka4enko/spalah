@@ -16,12 +16,13 @@
  *
  * @author Alexander Tkachenko
  */
-require_once 'data.php';
-$idPage = $_GET['page'];
-$product = getProduct($idPage);
+//require_once 'data.php';
+require_once 'src/object.php';
+$product = new ProductController();
+$product = $product->action();
 ?>
 <div class="container">
-	<?php require_once 'header.php'; ?>
+	<?php require_once 'headerzphp'; ?>
 
 	<main class="main">
 		<div class="product">

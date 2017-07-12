@@ -5,26 +5,15 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Spalah HomeWork Main</title>
-	<link rel="stylesheet" href="assets/css/main.css">
-
+	<title>Spalah HomeWork Product</title>
+	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-
-<?php
-/**
- * @param Home Work
- *
- * @author Alexander Tkachenko
- */
-require_once 'data.php';
-$product = getTopProduct();
-?>
 <div class="container">
 	<?php require_once 'header.php'; ?>
 	<main class="main">
 		<ul class="product-list">
-			<?php foreach ($product as $item){
+			<?php foreach ($variables as $item){
 				?>
 				<li>
 					<div class="product-list-item">
@@ -44,7 +33,7 @@ $product = getTopProduct();
 							<div class="product-price">
 								<?php echo $item[4];?>$
 							</div>
-							<a href="product?page=<?php echo $item[0]; ?>" class="btn product-link">
+							<a href="/?controller=Product&page=<?php echo $item[0]; ?>" class="btn product-link">
 								Подробнее
 							</a>
 						</div>
@@ -55,5 +44,6 @@ $product = getTopProduct();
 		</ul>
 	</main>
 </div>
+
 </body>
 </html>
