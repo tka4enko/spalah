@@ -34,5 +34,3 @@ include_once 'model/model-product.php';
 include_once 'model/model-index.php';
 include_once 'model/model-about.php';
 include_once 'views/view.php';
-
-
